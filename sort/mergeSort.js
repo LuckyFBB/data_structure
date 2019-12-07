@@ -1,3 +1,10 @@
+/*
+ * @Author: FBB
+ * @Date: 2019-02-14 14:51:23
+ * @LastEditors: FBB
+ * @LastEditTime: 2019-12-07 17:12:11
+ * @Description: 归并排序
+ */
 function mergeSort(arr) {
   let len = arr.length;
   __mergeSort(arr, 0, len - 1);
@@ -21,16 +28,17 @@ function __merge(arr, left, mid, right) {
   for (let i = left; i <= right; i++) {
     temp[i - left] = arr[i];
   }
-  let i = left, j = mid + 1;
+  let i = left,
+    j = mid + 1;
   for (let k = left; k <= right; k++) {
     if (i > mid) {
-      arr[k] = temp[j - left]
+      arr[k] = temp[j - left];
       j++;
     } else if (j > right) {
-      arr[k] = temp[i - left]
+      arr[k] = temp[i - left];
       i++;
     } else if (temp[i - left] < temp[j - left]) {
-      arr[k] = temp[i - left]
+      arr[k] = temp[i - left];
       i++;
     } else {
       arr[k] = temp[j - left];

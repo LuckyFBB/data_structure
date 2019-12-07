@@ -1,3 +1,10 @@
+/*
+ * @Author: FBB
+ * @Date: 2019-02-14 14:51:24
+ * @LastEditors: FBB
+ * @LastEditTime: 2019-12-07 17:11:50
+ * @Description: 快速排序
+ */
 function quickSort(arr) {
   let len = arr.length;
   __quickSortThreeWays(arr, 0, len - 1);
@@ -43,7 +50,8 @@ function __partition2(arr, left, right) {
   swap(arr, left, randomIndex);
   let standard = arr[left];
   //arr[l+1...i)<=standard,arr(j...r]>=standard
-  let i = left + 1, j = right;
+  let i = left + 1,
+    j = right;
   while (true) {
     while (i <= right && arr[i] < standard) i++;
     while (j >= left + 1 && arr[j] > standard) j--;
@@ -73,9 +81,9 @@ function __quickSortThreeWays(arr, left, right) {
   //将标准值交换到第一位
   swap(arr, left, randomIndex);
   let standard = arr[left];
-  let lt = left;   //arr[left...lt]<standard
-  let i = left + 1;    //arr[lt+1...i]=standard
-  let gt = right + 1;   //arr[gt...right]>standard
+  let lt = left; //arr[left...lt]<standard
+  let i = left + 1; //arr[lt+1...i]=standard
+  let gt = right + 1; //arr[gt...right]>standard
   while (i < gt) {
     if (arr[i] < standard) {
       swap(arr, i, lt + 1);

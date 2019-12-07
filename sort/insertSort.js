@@ -1,3 +1,10 @@
+/*
+ * @Author: FBB
+ * @Date: 2019-02-14 14:51:23
+ * @LastEditors: FBB
+ * @LastEditTime: 2019-12-07 17:12:22
+ * @Description: 插入排序
+ */
 function insertSort(arr) {
   let len = arr.length;
   for (let i = 1; i < len; i++) {
@@ -7,8 +14,7 @@ function insertSort(arr) {
         let temp = arr[j];
         arr[j] = arr[j - 1];
         arr[j - 1] = temp;
-      } else
-        break;
+      } else break;
     }
   }
   return arr;
@@ -23,7 +29,7 @@ function insertSort2(arr) {
     //要插入的位置
     let j;
     for (j = i; j > 0 && curr < arr[j - 1]; j--) {
-      arr[j] = arr[j - 1]
+      arr[j] = arr[j - 1];
     }
     arr[j] = curr;
   }

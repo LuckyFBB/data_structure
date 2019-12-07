@@ -1,3 +1,10 @@
+/*
+ * @Author: FBB
+ * @Date: 2019-02-14 14:51:23
+ * @LastEditors: FBB
+ * @LastEditTime: 2019-12-07 17:12:32
+ * @Description: 冒泡排序
+ */
 function bubbleSort(arr) {
   let len = arr.length;
   for (let i = 0; i < len; i++) {
