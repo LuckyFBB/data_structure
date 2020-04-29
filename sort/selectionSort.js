@@ -2,8 +2,14 @@
  * @Author: FBB
  * @Date: 2019-02-14 14:51:24
  * @LastEditors: FBB
- * @LastEditTime: 2019-12-07 17:12:00
+ * @LastEditTime: 2020-04-29 15:42:44
  * @Description: 选择排序
+ * 
+ * 每次都会在未排序的区间中找到最小的元素，将其放到已排序的区间末尾。
+ * 
+ * 选择排序是不稳定的排序算法
+ * 
+ * 最好情况时间复杂度O(n)，最坏情况时间复杂度O(n^2)，平均情况时间复杂度O(n^2)
  */
 
 function selectionSort(arr, n) {
