@@ -2,8 +2,14 @@
  * @Author: FBB
  * @Date: 2019-02-14 14:51:24
  * @LastEditors: FBB
- * @LastEditTime: 2019-12-07 17:11:50
+ * @LastEditTime: 2020-04-29 20:45:25
  * @Description: 快速排序
+ * 
+ * 从数组中选择一个Pivot(分区点)，然后将小于pivot的放到左边，大于pivot的放到右边。
+ * 
+ * 快速排序是不稳定算法
+ * 
+ * 最坏情况算法复杂度为O(n^2)，平均情况算法复杂度为O(nlogn)
  */
 function quickSort(arr) {
   let len = arr.length;

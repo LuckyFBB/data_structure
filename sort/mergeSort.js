@@ -2,8 +2,15 @@
  * @Author: FBB
  * @Date: 2019-02-14 14:51:23
  * @LastEditors: FBB
- * @LastEditTime: 2019-12-08 14:34:57
+ * @LastEditTime: 2020-04-29 20:25:21
  * @Description: 归并排序
+ *
+ * 先把数组先从中间分为前后两个部分，然后对前后两个部分分别排序，再将已经排好序的两个部分合在一起。
+ * 采用了分治思想。
+ *
+ * 归并排序是稳定排序算法
+ *
+ * 三种情况下的算法复杂度都是O(nlogn)
  */
 function mergeSort(arr) {
   let len = arr.length;
