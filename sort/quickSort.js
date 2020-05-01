@@ -2,7 +2,7 @@
  * @Author: FBB
  * @Date: 2019-02-14 14:51:24
  * @LastEditors: FBB
- * @LastEditTime: 2020-04-29 20:45:25
+ * @LastEditTime: 2020-05-01 15:56:53
  * @Description: 快速排序
  * 
  * 从数组中选择一个Pivot(分区点)，然后将小于pivot的放到左边，大于pivot的放到右边。
