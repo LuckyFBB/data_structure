@@ -2,7 +2,7 @@
  * @Author: FBB
  * @Date: 2019-02-14 14:51:23
  * @LastEditors: FBB
- * @LastEditTime: 2020-05-07 21:28:53
+ * @LastEditTime: 2020-05-08 20:34:53
  * @Description: 最大堆的实现
  *
  * 堆一定是一个完全二叉树
@@ -30,6 +30,7 @@ class MaxHeap {
 
   //删除最大值
   deleteMax() {
+    this.__buildHeap();
     if (this.getSize() === 0) return -1;
     this.data[1] = this.data.pop();
     console.log(this.getSize());
@@ -37,6 +38,7 @@ class MaxHeap {
   }
 
   sort() {
+    this.__buildHeap();
     let len = this.getSize();
     while (len > 1) {
       this.__swap(len, 1);
@@ -48,6 +50,12 @@ class MaxHeap {
   //返回当前大小
   getSize() {
     return this.data.length - 1;
+  }
+
+  __buildHeap() {
+    for (let i = parseInt(this.getSize() / 2); i > 0; i--) {
+      this.__shiftDown(this.getSize(), i);
+    }
   }
 
   //向上堆重构: 新元素跟父元素比较,新元素大则交换,一直到新元素比父元素小为止
